@@ -63,7 +63,7 @@
                         <td colspan="2">' + (feature.properties['name_english'] !== null ? Autolinker.link(String(feature.properties['name_english'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                    <td colspan="2">' + (feature.properties['pdf'] !== null ? '<a href="'+String(feature.properties['pdf']) + '">View PDF</a>' : '') + '</td>\
+                    <td colspan="2">' + (feature.properties['pdf'] !== null ? '<a target="_blank" href="'+String(feature.properties['pdf']) + '">View PDF</a>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {minWidth: 500});
