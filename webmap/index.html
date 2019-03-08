@@ -52,7 +52,7 @@
         layer_Pompeii_1.addTo(map);
 
         function pop_gardens_2(feature, layer) {
-            var popupContent = '<table>\
+            var popupContent = '<table style="width:300px">\
                     <tr>\
                         <th colspan="2">' + (feature.properties['pompeii_id'] !== null ? Autolinker.link(String(feature.properties['pompeii_id'])) : '') + '</th>\
                     </tr>\
@@ -63,10 +63,10 @@
                         <td colspan="2">' + (feature.properties['name_english'] !== null ? Autolinker.link(String(feature.properties['name_english'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['pdf'] !== null ? Autolinker.link(String(feature.properties['pdf'])) : '') + '</td>\
+                    <td colspan="2">' + (feature.properties['pdf'] !== null ? '<a href="'+String(feature.properties['pdf']) + '">View PDF</a>' : '') + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+            layer.bindPopup(popupContent, {minWidth: 500});
         }
 
         function style_gardens_2_0() {
